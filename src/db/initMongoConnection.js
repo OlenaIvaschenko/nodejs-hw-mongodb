@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-// src/db/initMongoDB.js
+
 import dotenv from "dotenv";
 
 dotenv.config();
