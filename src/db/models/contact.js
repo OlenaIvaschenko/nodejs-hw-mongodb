@@ -1,4 +1,4 @@
-import { model, Schema } from 'mangoose';
+import { model, Schema } from 'mongoose';
 const ContactsSchema = new Schema(
   {
     name: {
