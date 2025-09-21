@@ -12,6 +12,8 @@ dotenv.config();
 export const setupServer = () => {
   const app = express();
 
+  app.use(express.json());
+
   const PORT = Number(process.env.PORT || 3000);
 
   app.use(contactsRouter);
