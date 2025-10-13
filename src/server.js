@@ -6,6 +6,9 @@ import router from './routers/index.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import cookieParser from 'cookie-parser';
+import { getEnvVar } from './utils/getEnvVar.js';
+
+const PORT = Number(getEnvVar('PORT', '3000'));
 
 dotenv.config();
 
@@ -14,7 +17,6 @@ export const setupServer = () => {
 
   app.use(express.json());
 
-  const PORT = Number(process.env.PORT || 3000);
 
   app.use(cors());
   app.use(cookieParser());
