@@ -1,5 +1,3 @@
-// src/services/auth.js
-
 import jwt from 'jsonwebtoken';
 import { randomBytes } from 'crypto';
 import bcrypt from 'bcrypt';
