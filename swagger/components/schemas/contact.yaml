@@ -1,0 +1,109 @@
+# type: object
+# required:
+#    - _id
+#    - name
+#    - phoneNumber
+#    - email
+#    - contactType
+#    - userId
+#    - createdAt
+#    - updatedAt
+# properties:
+#   _id:
+#     type: string
+#     description: Contact id
+#     example: 68efd41636a23320bb4ef586
+#   name:
+#     type: string
+#     description: Contact name
+#     example: John Deere
+#   phoneNumber:
+#    type: string 
+# description: Contact phone phoneNumber
+# example: +380997112233
+# email:
+#   type: string
+#   description: Contact email
+#   exapmle: olenaI@gmail.com
+# contactType:
+#     type: string
+#     description: Type of the contact
+#     enum: ['work', 'home', 'personal']
+#     example: personal
+# userId:
+#     type: string
+#     description: Contact user id
+#     example: 68efd834f1781f960b1e7a6c
+# createdAt:
+#     type: string
+#     format: date-time
+#     example: 2025-10-08T18:21:10.157+00:00
+# updatedAt:
+#     type: string
+#     format: date-time
+#     example: 2025-10-08T18:21:10.157+00:00
+    
+# photo:
+#     type: string
+#     description: Contact user photo
+#     default: null
+#     example: https://res.cloudinary.com/dha4xvgfi/image/upload/v1759947947/aclxd7sbpsrb8hviowbe.jpg
+  
+type: object
+required:
+  - _id
+  - name
+  - phoneNumber
+  - email
+  - contactType
+  - userId
+  - createdAt
+  - updatedAt
+properties:
+  _id:
+    type: string
+    description: Contact id
+    example: 68efd41636a23320bb4ef586
+
+  name:
+    type: string
+    description: Contact name
+    example: John Deere
+
+  phoneNumber:
+    type: string
+    description: Contact phone number
+    example: +380997112233
+
+  email:
+    type: string
+    description: Contact email
+    example: olenaI@gmail.com
+
+  contactType:
+    type: string
+    description: Type of the contact
+    enum: [work, home, personal]
+    example: personal
+
+  userId:
+    type: string
+    description: Contact user id
+    example: 68efd834f1781f960b1e7a6c
+
+  createdAt:
+    type: string
+    format: date-time
+    example: 2025-10-08T18:21:10.157+00:00
+
+  updatedAt:
+    type: string
+    format: date-time
+    example: 2025-10-08T18:21:10.157+00:00
+
+  photo:
+    type: string
+    description: Contact user photo
+    default: null
+    example: https://res.cloudinary.com/dha4xvgfi/image/upload/v1759947947/aclxd7sbpsrb8hviowbe.jpg
+ 
