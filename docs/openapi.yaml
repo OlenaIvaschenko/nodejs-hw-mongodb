@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: <назва вашого додатку>
+  title: Contacts app
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -17,9 +17,15 @@ servers:
   - url: https://example.com/api/v1
 paths:
   /contacts:
+    get:
+      $ref: ../swagger/paths/contacts/get.yaml
     post: 
       $ref: ../swagger/paths/contacts/post.yaml
   /contacts/{id}:
+    delete: 
+      $ref: ../swagger/paths/contacts/{id}/delete.yaml
+    patch:
+      $ref: ../swagger/paths/contacts/{id}/patch.yaml
     get:
       $ref: ../swagger/paths/contacts/{id}/get.yaml
 components:

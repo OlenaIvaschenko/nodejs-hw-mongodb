@@ -1,0 +1,53 @@
+# type: object
+# properties:
+#   name:
+#     type: string
+#     example: John Doe
+#   email:
+#     type: string
+#     example: john@example.com
+#   phoneNumber:
+#     type: string
+#     example: "+380991112233"
+#   contactType:
+#     type: string
+#     enum: [personal, work]
+# required:
+#   - name
+
+
+#   export const updateContactSchema = Joi.object({
+#   name: Joi.string().min(3).max(20),
+#   phoneNumber: Joi.string().min(3).max(20),
+#   email: Joi.string().min(3).max(20),
+#   isFavourite: Joi.boolean(),
+#   contactType: Joi.string().valid('work', 'home', 'personal'),
+# });
+
+type: object
+properties:
+  name:
+    type: string
+    minLength: 3
+    maxLength: 20
+    example: "John Doe"
+  phoneNumber:
+    type: string
+    minLength: 3
+    maxLength: 20
+    example: "+380991112233"
+  email:
+    type: string
+    minLength: 3
+    maxLength: 20
+    example: "john@example.com"
+  isFavourite:
+    type: boolean
+    example: false
+  contactType:
+    type: string
+    enum: [work, home, personal]
+    example: "work"
+required: []
+description: 
+  Schema for updating an existing contact. All fields are optional, but at least one must be provided.

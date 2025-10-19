@@ -7,6 +7,8 @@ import { notFoundHandler } from './middlewares/notFoundHandler.js';
 import { errorHandler } from './middlewares/errorHandler.js';
 import cookieParser from 'cookie-parser';
 import { getEnvVar } from './utils/getEnvVar.js';
+import { swaggerDocs } from './middlewares/swaggerDocs.js';
+import { UPLOAD_DIR } from './constants/index.js';
 
 const PORT = Number(getEnvVar('PORT', '3000'));
 
@@ -14,6 +16,8 @@ dotenv.config();
 
 const setupServer = () => {
   const app = express();
+
+  app.use('/api-docs', swaggerDocs());
 
   app.use(express.json());
 
@@ -31,6 +35,9 @@ const setupServer = () => {
 
   app.use(notFoundHandler);
   app.use(errorHandler);
+
+  app.use('/uploads', express.static(UPLOAD_DIR));
+  
 
   app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);

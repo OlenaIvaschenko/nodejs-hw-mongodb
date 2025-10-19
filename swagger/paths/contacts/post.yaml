@@ -93,10 +93,10 @@ requestBody:
         required:
           - name
           - phoneNumber
-          - email
-          - isFavourite
-          - contactType
-          - userId
+          # - email
+          # - isFavourite
+          # - contactType
+          
         properties:
           name:
             description: Contact name
@@ -119,10 +119,10 @@ requestBody:
             description: Type of the contact
             enum: [work, home, personal]
             example: personal
-          userId:
-            type: string
-            description: Contact user id
-            example: 68efd834f1781f960b1e7a6c
+          # userId:
+          #   type: string
+          #   description: Contact user id
+          #   example: 68efd834f1781f960b1e7a6c
           photo:
             description: Contact's photo
             type: string
