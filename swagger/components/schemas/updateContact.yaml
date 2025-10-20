@@ -48,6 +48,11 @@ properties:
     type: string
     enum: [work, home, personal]
     example: "work"
+  photo:
+    type: string
+    format: binary
+    
+
 required: []
 description: 
   Schema for updating an existing contact. All fields are optional, but at least one must be provided.

@@ -301,6 +301,9 @@
         "responses": {
           "204": {
             "description": "Deleted successfully"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           }
         }
       },
@@ -330,7 +333,7 @@
         "requestBody": {
           "required": true,
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
                 "$ref": "#/components/schemas/updateContact"
               }
@@ -564,6 +567,10 @@
               "personal"
             ],
             "example": "work"
+          },
+          "photo": {
+            "type": "string",
+            "format": "binary"
           }
         },
         "required": [],
